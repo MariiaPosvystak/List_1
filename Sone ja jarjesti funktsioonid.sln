@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Sone ja jarjesti funktsioonid", "Sone ja jarjesti funktsioonid.pyproj", "{8F024C3B-7755-4950-A66A-81CC658ED29A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F024C3B-7755-4950-A66A-81CC658ED29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F024C3B-7755-4950-A66A-81CC658ED29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1AABBE0-0971-47C0-97E4-C2F8CBA47B87}
+	EndGlobalSection
+EndGlobal
