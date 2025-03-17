@@ -1,92 +1,144 @@
-from audioop import reverse
-from random import*
-a=input("Введите первую строку: ")
-b=input("Введите вторую строку: ")
-a_list=list(a)
-b_list=list(b)
-print("1 список")
+
+from random import *
+a = input("Sisesta esimene rida: ")
+b = input("Sisesta teine rida: ")
+a_list = list(a)
+b_list = list(b)
+print("1. loend")
 print(a_list)
-print("2 список")
+print("2. loend")
 print(b_list)
-print("Выберети один из предложеных вариантов")
+print("Valige üks järgmistest valikutest")
 while True:
-    print("1 - Дабавить букву в список")
-    print("2 - Удалить элемент по его индексу")
-    print("3 - Получение индекса первого вхождения элемента")
-    print("4 - Объединение двух списков")
-    print("5 - Сортировка списка по возрастанию")
-    print("6 - Сортировка списка по убыванию")
-    print("7 - ")
-    print("8 - ")
-    print("9 - ")
-    print("10- ")
-    valik=int(input())
-    if valik==1:
-        V=input("Какой из списков отсортировать")
-        if V==1:
-            w=input("Введите букву: ")
+    print("1 - Lisa täht loendisse")
+    print("2 - Eemalda element vastavalt indeksile")
+    print("3 - Leia esimese esinemise indeks")
+    print("4 - Ühenda kaks loendit")
+    print("5 - Sorteeri loend kasvavas järjekorras")
+    print("6 - Sorteeri loend kahanevas järjekorras")
+    print("7 - Loo loend arvude vahemikust")
+    print("8 - Kopeeri loend")
+    print("9 - Muuda tähemärki loendis")
+    print("10 - Eemalda loend")
+    print("0 - Välju")
+    valik = int(input())
+    if valik == 1:
+        V = int(input("Kuhu loendisse soovite tähe lisada (1 või 2): "))
+        w = input("Sisesta täht: ")
+        if V == 1:
             a_list.append(w)
             print(a_list)
-        elif V==2:
-            w=input("Введите букву: ")
+        elif V == 2:
             b_list.append(w)
             print(b_list)
         else:
             print("Error!")
-    elif valik==2:
-        V=input("Какой из списков отсортировать")
-        if V==1:
-            ind=input("Введите индекс символа")
+    elif valik == 2:
+        V = int(input("Kust loendist soovite tähe eemaldada (1 või 2): "))
+        ind = int(input("Sisesta tähe indeks: "))
+        if V == 1:
             a_list.pop(ind)
             print(a_list)
-        elif V==2:
-            ind=input("Введите индекс символа")
+        elif V == 2:
             b_list.pop(ind)
             print(b_list)
         else:
             print("Error!")
-    elif valik==3:
-        V=input("Какой из списков отсортировать")
-        if V==1:
-            a=input("Введите элемент:")
-            il=a_list.index(a)
-            print(il)
-        elif V==2:
-            a=input("Введите элемент:")
-            il=b_list.index(a)
-            print(il)
+    elif valik == 3:
+        V = int(input("Millises loendis soovite teada esimesena esineva elemendi indeksit (1 või 2): "))
+        elem = input("Sisesta element: ")
+        if V == 1:
+            print(a_list.index(elem))
+        elif V == 2:
+            print(b_list.index(elem))
         else:
             print("Error!")
-    elif valik==4:
-        M=a_list + b_list
+    elif valik == 4:
+        M = a_list + b_list
         print(M)
-    elif valik==5:
-        V=input("Какой из списков отсортировать")
-        if V==1:
+    elif valik == 5:
+        V = int(input("Millist loendit sooritada sorteerimine (1 või 2): "))
+        if V == 1:
             a_list.sort()
             print(a_list)
-        elif V==2:
+        elif V == 2:
             b_list.sort()
             print(b_list)
         else:
             print("Error!")
-    elif valik==6:
-        V=input("Какой из списков отсортировать")
-        if V==1:
+    elif valik == 6:
+        V = int(input("Millist loendit sooritada sorteerimine (1 või 2): "))
+        if V == 1:
             a_list.sort(reverse=True)
             print(a_list)
-        elif V==2:
+        elif V == 2:
             b_list.sort(reverse=True)
             print(b_list)
         else:
             print("Error!")
-    elif valik==7:
-    elif valik==8:
-    elif valik==9:
-    elif valik==10:
-
-        V=input("Какой из списков отсортировать")
-        if V==1:
-        elif V==2:
+    elif valik == 7:
+        try:
+            g = int(input("Sisesta number kuni mille loend ulatub: "))
+            c_list = list(range(g))
+            print(c_list)
+        except ValueError:
+            print("Error")
+    elif valik == 8:
+        V = int(input("Kumb loend soovite kopeerida (1 või 2): "))
+        if V == 1:
+            a_copy = a_list.copy()
+            print(a_copy)
+        elif V == 2:
+            b_copy = b_list.copy()
+            print(b_copy)
         else:
             print("Error!")
+    elif valik == 9:
+        V = int(input("Millises loendis soovite muuta tähte (1 või 2): "))
+        if V == 1:
+            while True:
+                try:
+                    i = int(input("Sisesta number: "))
+                    break
+                except ValueError:
+                    print("Vale formaat!")
+            while True:
+                k = input("Sisesta ükskõik milline täht/sõna/lausung: ")
+                if k.isalpha():
+                    break
+                else:
+                    print("Vale formaat!")
+            a_list[i] = k
+            print(a_list)
+        elif V == 2:
+            while True:
+                try:
+                    i = int(input("Sisesta number: "))
+                    break
+                except ValueError:
+                    print("Vale formaat!")
+            while True:
+                k = input("Sisesta ükskõik milline täht/sõna/lausung: ")
+                if k.isalpha():
+                    break
+                else:
+                    print("Vale formaat!")
+            b_list[i] = k
+            print(b_list)
+        else:
+            print("Error!")
+    elif valik == 10:
+        V = int(input("Kumb loend soovite eemaldada (1 või 2): "))
+        if V == 1:
+            a_list.clear()
+            print(a_list)
+        elif V == 2:
+            b_list.clear()
+            print(b_list)
+        else:
+            print("Error!")
+    elif valik == 0:
+        break
+    else:
+        print("Error")
+            
