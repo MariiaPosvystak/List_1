@@ -140,5 +140,4 @@ while True:
     elif valik == 0:
         break
     else:
-        print("Error")
-            
+        print("Error")       
