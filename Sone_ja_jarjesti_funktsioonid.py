@@ -1,4 +1,3 @@
-
 from random import *
 a = input("Sisesta esimene rida: ")
 b = input("Sisesta teine rida: ")
