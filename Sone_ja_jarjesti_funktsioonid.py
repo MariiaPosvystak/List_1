@@ -20,7 +20,10 @@ while True:
     print("9 - Muuda tähemärki loendis")
     print("10 - Eemalda loend")
     print("0 - Välju")
-    valik = int(input())
+    try:
+        valik = int(input())
+    except:
+        print("Error")
     if valik == 1:
         V = int(input("Kuhu loendisse soovite tähe lisada (1 või 2): "))
         w = input("Sisesta täht: ")
