@@ -19,6 +19,11 @@ while True:
     print("8 - Kopeeri loend")
     print("9 - Muuda tähemärki loendis")
     print("10 - Eemalda loend")
+    print("11 - Kontrolli, kas string on pealkirja vormingus")
+    print("12 - Eemalda juhtivad märgid")
+    print("13 - Vaheta suur- ja väiketähed")
+    print("14 - Muuda esimene täht suureks")
+    print("15 - Eemalda lõpus olevad märgid")
     print("0 - Välju")
     try:
         valik = int(input())
@@ -137,6 +142,48 @@ while True:
         elif V == 2:
             b_list.clear()
             print(b_list)
+        else:
+            print("Error!")
+    elif valik == 11:
+        V = int(input("Millist stringi kontrollida (1 või 2): "))
+        if V == 1:
+            print(a.istitle())
+        elif V == 2:
+            print(b.istitle())
+        else:
+            print("Error!")
+    elif valik == 12:
+        V = int(input("Millise rea eesolevad tähemärgid lahendada(1 või 2): "))
+        C = input("Sisesta eemaldatavad tähemärgid ")
+        if V == 1:
+            print(a.lstrip(C))
+        elif V == 2:
+            print(b.lstrip(C))
+        else:
+            print("Error!")
+    elif valik == 13:
+        V = int(input("Millises reas vahetada juhtmik (1 või 2): "))
+        if V == 1:
+            print(a.swapcase())
+        elif V == 2:
+            print(b.swapcase())
+        else:
+            print("Error!")
+    elif valik == 14:
+        V = int(input("Millisel real pane esimene märk suurtähtedega (1 või 2): "))
+        if V == 1:
+            print(a.capitalize())
+        elif V == 2:
+            print(b.capitalize())
+        else:
+            print("Error!")
+    elif valik == 15:
+        V = int(input("Millises loetelus kustutada viimased tähemärgid (1 või 2): "))
+        C = input("Sisesta eemaldatavad tähemärgid ")
+        if V == 1:
+            print(a.rstrip(C))
+        elif V == 2:
+            print(b.rstrip(C))
         else:
             print("Error!")
     elif valik == 0:
